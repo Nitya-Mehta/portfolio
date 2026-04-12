@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nitya</title>
+<meta name="description" content="Nitya Mehta"/>
+<link rel="icon" type="image/png" href="assets/icons/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="#" class="logo">Nitya Mehta</a>
+
+  <ul class="nav-center" id="navCenter">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certs">Certifications</a></li>
+    <li><a href="#blog">Blog</a></li>
+  </ul>
+
+  <!-- Icon links + CTA -->
+  <div class="nav-icons">
+    <!-- GitHub -->
+    <a href="https://github.com/Nitya-Mehta" target="_blank" class="nav-icon" title="GitHub">
+      <svg fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+    </a>
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/nityamehta/" target="_blank" class="nav-icon" title="LinkedIn">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <!-- Medium -->
+    <a href="https://medium.com/@nityachintan" target="_blank" class="nav-icon" title="Medium">
+      <svg fill="currentColor" viewBox="0 0 1043.63 592.71"><path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460.03 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.17-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"/></svg>
+    </a>
+    <!-- Mail / Contact -->
+    <a href="mailto:nityachintan@gmail.com" class="nav-icon" title="Email">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+    </a>
+    <a href="assets/docs/myresume.pdf" target="_blank" class="nav-icon" title="Resume" style="font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted);">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin-right:4px;vertical-align:middle"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V19a2 2 0 002 2h14a2 2 0 002-2v-2M16 6l-4-4-4 4M12 2v10"/></svg>CV
+    </a>
+
+    <a href="#contact" class="nav-contact">Hire me</a>
+
+    <button class="nav-toggle" id="nt" aria-label="menu">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <!-- mobile menu -->
+  <ul class="nav-links" id="nl" style="display:none;list-style:none">
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#work" onclick="closeNav()">Work</a></li>
+    <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+    <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <!-- side meta -->
+  <div class="hero-meta">
+    <span class="hero-meta-item">Ahmedabad · India</span>
+    <span class="hero-meta-item">Available · 2026</span>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-greeting">I build things to understand how they break.</p>
+
+    <div class="hero-name-wrap">
+      <span class="hero-name" id="heroName" aria-label="Nitya Mehta"></span>
+    </div>
+
+    <div class="hero-rule"></div>
+
+    <div class="hero-foot">
+      <p class="hero-desc"><span style="color: red;">hi i'm nitya,</span> a CS student who builds systems, shoots landscapes on weekends, and plays whatever game everyone's talking about. I like understanding how things work, then making them work better.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-p mag">See my work</a>
+        <a href="#contact" class="btn-g">Get in touch →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+ <div class="container">
+<section id="about">
+  <div class="about-wrap">
+    <div class="r">
+      <p class="sec-label">About</p>
+      <h2 class="sec-title" style="margin-bottom:2rem">I learn by building<br/><em style="font-family:var(--serif);font-style:italic">and <span style="color: red;">breaking</span> <br/></em>things.</h2>
+      <div class="about-copy">
+        <p>I’m a final-year Computer Science student based in Ahmedabad, focused on turning ideas into real, working systems. I prefer hands-on learning over theory, so most of my time goes into building, testing, and refining machine learning projects until they actually work in real-world settings. I care more about shipping something useful than keeping it perfect on paper.</p>
+        <p>Right now, I’m expanding my focus into cybersecurity and robotics, exploring how intelligent systems can interact with and operate in real environments while staying secure and reliable.</p>
+        <p>Outside the screen: I shoot landscapes; the kind where you wait for the light to be exactly right. And I'll play pretty much any game once. If you want to talk, my email's at the bottom.</p>
+      </div>
+    </div>    
+
+    <!-- illustrated photo stack -->
+    <div class="photo-stack r d2" id="photoStack">
+     
+      <div class="photo-card pc1" data-rx="0.6" data-ry="0.5">
+        <svg class="scene" viewBox="0 0 280 360" xmlns="http://www.w3.org/2000/svg">
+          <rect width="280" height="360" fill="#0d0d10"/>
+          <line x1="0" y1="90" x2="280" y2="90" stroke="#1a1a20" stroke-width="1"/>
+          <line x1="0" y1="180" x2="280" y2="180" stroke="#1a1a20" stroke-width="1"/>
+          <line x1="0" y1="270" x2="280" y2="270" stroke="#1a1a20" stroke-width="1"/>
+          <line x1="70" y1="0" x2="70" y2="360" stroke="#1a1a20" stroke-width="1"/>
+          <line x1="140" y1="0" x2="140" y2="360" stroke="#1a1a20" stroke-width="1"/>
+          <line x1="210" y1="0" x2="210" y2="360" stroke="#1a1a20" stroke-width="1"/>
+          <!-- training loss curve -->
+          <polyline points="18,305 50,265 82,225 112,180 140,150 172,122 202,108 235,100 262,96" fill="none" stroke="#3A7BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+          <circle cx="18" cy="305" r="3" fill="#3A7BFF"/>
+          <circle cx="82" cy="225" r="3" fill="#3A7BFF"/>
+          <circle cx="140" cy="150" r="3" fill="#3A7BFF"/>
+          <circle cx="202" cy="108" r="3" fill="#3A7BFF"/>
+          <circle cx="262" cy="96" r="3" fill="#3A7BFF"/>
+          <!-- val accuracy -->
+          <polyline points="18,52 50,70 82,95 112,118 140,138 172,152 202,160 235,164 262,166" fill="none" stroke="#FF2D2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+          <text x="16" y="352" font-family="monospace" font-size="8" fill="#2a2a35">epoch</text>
+          <text x="14" y="28" font-family="monospace" font-size="8" fill="#3A7BFF" opacity=".8">loss ↓</text>
+          <text x="14" y="42" font-family="monospace" font-size="8" fill="#FF2D2D" opacity=".7">val_acc ↑</text>
+        </svg>
+      </div>
+
+      <div class="photo-card pc2" data-rx="0.9" data-ry="0.7">
+        <svg class="scene" viewBox="0 0 250 295" xmlns="http://www.w3.org/2000/svg">
+          <rect width="250" height="295" fill="#080810"/>
+          <defs><linearGradient id="skyg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#09091a"/><stop offset="100%" stop-color="#10101c"/></linearGradient></defs>
+          <rect width="250" height="210" fill="url(#skyg)"/>
+          <circle cx="195" cy="52" r="16" fill="#0d0d1c"/>
+          <circle cx="202" cy="47" r="16" fill="#080810"/>
+          <circle cx="30" cy="28" r="1" fill="#EDEDED" opacity=".5"/>
+          <circle cx="75" cy="18" r=".8" fill="#EDEDED" opacity=".35"/>
+          <circle cx="125" cy="38" r="1.1" fill="#EDEDED" opacity=".45"/>
+          <circle cx="55" cy="58" r=".7" fill="#EDEDED" opacity=".3"/>
+          <circle cx="160" cy="22" r=".9" fill="#EDEDED" opacity=".45"/>
+          <circle cx="40" cy="76" r=".8" fill="#EDEDED" opacity=".35"/>
+          <!-- buildings -->
+          <rect x="0" y="132" width="32" height="163" fill="#0e0e16"/>
+          <rect x="36" y="115" width="26" height="180" fill="#111118"/>
+          <rect x="66" y="148" width="18" height="147" fill="#0d0d15"/>
+          <rect x="88" y="125" width="38" height="170" fill="#0f0f18"/>
+          <rect x="130" y="155" width="28" height="140" fill="#0c0c14"/>
+          <rect x="162" y="108" width="42" height="187" fill="#0e0e17"/>
+          <rect x="208" y="138" width="35" height="157" fill="#0b0b13"/>
+          <!-- windows -->
+          <rect x="8" y="160" width="4" height="4" fill="#3A7BFF" opacity=".5" rx="1"/>
+          <rect x="16" y="160" width="4" height="4" fill="#3A7BFF" opacity=".25" rx="1"/>
+          <rect x="8" y="172" width="4" height="4" fill="#FF2D2D" opacity=".35" rx="1"/>
+          <rect x="43" y="128" width="4" height="4" fill="#3A7BFF" opacity=".6" rx="1"/>
+          <rect x="52" y="128" width="4" height="4" fill="#3A7BFF" opacity=".2" rx="1"/>
+          <rect x="96" y="138" width="5" height="5" fill="#3A7BFF" opacity=".4" rx="1"/>
+          <rect x="106" y="138" width="5" height="5" fill="#FF2D2D" opacity=".5" rx="1"/>
+          <rect x="116" y="138" width="5" height="5" fill="#3A7BFF" opacity=".2" rx="1"/>
+          <rect x="170" y="122" width="5" height="5" fill="#FF2D2D" opacity=".4" rx="1"/>
+          <rect x="180" y="122" width="5" height="5" fill="#3A7BFF" opacity=".45" rx="1"/>
+          <rect x="190" y="122" width="5" height="5" fill="#3A7BFF" opacity=".6" rx="1"/>
+          <rect x="0" y="258" width="250" height="37" fill="#050508"/>
+          <line x1="0" y1="258" x2="250" y2="258" stroke="#1a1a24" stroke-width="1"/>
+          <text x="125" y="280" text-anchor="middle" font-family="monospace" font-size="7" fill="#2a2a32" letter-spacing="3">AHMEDABAD</text>
+        </svg>
+      </div>
+
+      <div class="photo-card pc3" data-rx="1.3" data-ry="1.0">
+        <svg class="scene" viewBox="0 0 210 248" xmlns="http://www.w3.org/2000/svg">
+          <rect width="210" height="248" fill="#090909"/>
+          <!-- connections -->
+          <g stroke="#1e1e28" stroke-width="1" fill="none">
+            <line x1="38" y1="62" x2="105" y2="85"/>
+            <line x1="38" y1="62" x2="105" y2="124"/>
+            <line x1="38" y1="62" x2="105" y2="163"/>
+            <line x1="38" y1="124" x2="105" y2="85"/>
+            <line x1="38" y1="124" x2="105" y2="124"/>
+            <line x1="38" y1="124" x2="105" y2="163"/>
+            <line x1="38" y1="186" x2="105" y2="85"/>
+            <line x1="38" y1="186" x2="105" y2="124"/>
+            <line x1="38" y1="186" x2="105" y2="163"/>
+            <line x1="105" y1="85" x2="172" y2="105"/>
+            <line x1="105" y1="85" x2="172" y2="143"/>
+            <line x1="105" y1="124" x2="172" y2="105"/>
+            <line x1="105" y1="124" x2="172" y2="143"/>
+            <line x1="105" y1="163" x2="172" y2="105"/>
+            <line x1="105" y1="163" x2="172" y2="143"/>
+          </g>
+          <!-- highlighted path -->
+          <line x1="38" y1="124" x2="105" y2="163" stroke="#3A7BFF" stroke-width="1.5" opacity=".7"/>
+          <line x1="105" y1="163" x2="172" y2="143" stroke="#3A7BFF" stroke-width="1.5" opacity=".7"/>
+          <!-- nodes -->
+          <circle cx="38" cy="62" r="6" fill="#111" stroke="#2a2a35" stroke-width="1.5"/>
+          <circle cx="38" cy="124" r="6" fill="#111" stroke="#FF2D2D" stroke-width="1.5"/>
+          <circle cx="38" cy="186" r="6" fill="#111" stroke="#2a2a35" stroke-width="1.5"/>
+          <circle cx="105" cy="85" r="6" fill="#111" stroke="#2a2a35" stroke-width="1.5"/>
+          <circle cx="105" cy="124" r="6" fill="#111" stroke="#2a2a35" stroke-width="1.5"/>
+          <circle cx="105" cy="163" r="6" fill="#111" stroke="#3A7BFF" stroke-width="1.5"/>
+          <circle cx="172" cy="105" r="6" fill="#111" stroke="#2a2a35" stroke-width="1.5"/>
+          <circle cx="172" cy="143" r="8" fill="#FF2D2D" opacity=".85"/>
+          <text x="105" y="222" text-anchor="middle" font-family="monospace" font-size="7" fill="#2a2a35" letter-spacing="2">NEURAL NET</text>
+        </svg>
+      </div>
+
+      <img src="assets/images/profile.JPG" class="profile-top" alt="Profile"/>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ══ WORK ══ -->
+<div class="container">
+<section id="work">
+  <div class="work-wrap r">
+    <p class="sec-label">Experience</p>
+    <h2 class="sec-title">Where I've worked</h2>
+    <p class="work-intro">Two internships so far, both in machine learning. I care more about what I built than where I did it.</p>
+  </div>
+  <div class="work-wrap">
+    <div class="tl-row r">
+      <div class="tl-when">Jul 2025<br/>IBM SkillsBuild<br/>via CSRBOX</div>
+      <div>
+        <div class="tl-role">AI Intern</div>
+        <div class="tl-co">IBM SkillsBuild · via CSRBOX</div>
+        <ul class="tl-pts">
+          <li>Built AlertAid — describe a workplace hazard, the app classifies it and sends out an alert. It went live on Streamlit.</li>
+          <li>Used Gemini Flash API for classification, wrote email automation from scratch with SMTP, handled the full deployment.</li>
+          <li>Mostly prompt engineering and wiring things together, which turns out to be most of building an AI product.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row r d1">
+      <div class="tl-when">Mar – Apr 2025<br/>Prodigy Infotech</div>
+      <div>
+        <div class="tl-role">Machine Learning Intern</div>
+        <div class="tl-co">Prodigy Infotech</div>
+        <ul class="tl-pts">
+          <li>Worked through supervised learning tasks — classification, regression, EDA — using Python and Scikit-learn.</li>
+          <li>Good practice for building clean ML pipelines and documenting work properly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<!-- ══ PROJECTS ══ -->
+<section id="projects">
+
+    <!-- Section label -->
+    <div class="proj-header r" style="margin-bottom:2.5rem">
+      <div>
+        <p class="sec-label">Projects</p>
+        <h2 class="sec-title">Things I've shipped</h2>
+      </div>
+    </div>
+
+    <div class="pv2-top r">
+
+      <!-- Card 1: AlertAid -->
+      <div class="pv2-card">
+      <a href="https://alertaid.streamlit.app/" target="_blank">
+        <div class="pv2-visual" style="background:linear-gradient(160deg,#110808 0%,#0d0d10 100%)">
+          <div class="pv2-visual-inner">
+            <div class="pv2-icon">⚠️</div>
+            <div class="pv2-vis-label" style="color:#FF2D2D">AlertAid</div>
+            <div class="pv2-vis-sub">Workplace Hazard Reporter</div>
+            <div class="pv2-vis-tags">
+              <span class="pv2-vtag" style="color:#FF2D2D;border-color:rgba(255,45,45,.25)">Gemini API</span>
+              <span class="pv2-vtag" style="color:#3A7BFF;border-color:rgba(58,123,255,.25)">Streamlit</span>
+            </div>
+          </div>
+        </div>
+        <div class="pv2-info">
+          <div class="pv2-eyebrow">
+            <span class="pv2-dot" style="background:#FF2D2D"></span>Live
+          </div>
+          <h3 class="pv2-title">AlertAid</h3>
+          <p class="pv2-body">Workplace hazard reporter built at IBM internship. Classifies incidents, writes an action plan, and emails the right people — automatically.</p>
+          <div class="tags" style="margin-top:auto;padding-top:.75rem">
+            <span class="tag">Python</span><span class="tag">Gemini API</span><span class="tag">SMTP</span><span class="tag">Streamlit</span>
+          </div>
+          <div class="pv2-links">
+            <span class="pv2-link-chip">
+              <svg width="11" height="11" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Live app
+            </span>
+            <a href="https://github.com/Nitya-Mehta/AlertAid/" target="_blank" class="pv2-link-chip" onclick="event.stopPropagation()">
+              <svg width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>GitHub
+            </a>
+          </div>
+        </div>
+      </a>
+      </div>
+
+      <!-- Card 2: F1 -->
+      <div class="pv2-card">
+      <a href="https://formula1-predcition-model.streamlit.app/" target="_blank">
+        <div class="pv2-visual" style="background:linear-gradient(160deg,#080c18 0%,#0a0d1a 100%)">
+          <div class="pv2-visual-inner">
+            <div class="pv2-icon">🏎️</div>
+            <div class="pv2-vis-label" style="color:#3A7BFF">F1 Predictor</div>
+            <div class="pv2-vis-sub">Race Outcome Prediction</div>
+            <div class="pv2-vis-tags">
+              <span class="pv2-vtag" style="color:#3A7BFF;border-color:rgba(58,123,255,.25)">XGBoost</span>
+              <span class="pv2-vtag" style="color:#FF6B2C;border-color:rgba(255,107,44,.25)">Pandas</span>
+            </div>
+          </div>
+        </div>
+        <div class="pv2-info">
+          <div class="pv2-eyebrow">
+            <span class="pv2-dot" style="background:#3A7BFF"></span>Live
+          </div>
+          <h3 class="pv2-title">F1 Race Winner Prediction</h3>
+          <p class="pv2-body">XGBoost model on historical F1 data. Feed it race conditions and it predicts the likely winner. Full pipeline from raw data to live Streamlit app.</p>
+          <div class="tags" style="margin-top:auto;padding-top:.75rem">
+            <span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">Pandas</span><span class="tag">Streamlit</span>
+          </div>
+          <div class="pv2-links">
+            <span class="pv2-link-chip">
+              <svg width="11" height="11" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Live app
+            </span>
+            <a href="https://github.com/Nitya-Mehta/Formula1-Predcition-Model" target="_blank" class="pv2-link-chip" onclick="event.stopPropagation()">
+              <svg width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>GitHub
+            </a>
+          </div>
+        </div>
+      </a>
+      </div>
+
+      <!-- Card 3: MNIST -->
+      <!-- <div class="pv2-card">
+      <a href="https://github.com/Nitya-Mehta/mnist-nn-from-scratch/" target="_blank">
+        <div class="pv2-visual" style="background:linear-gradient(160deg,#060908 0%,#090909 100%)">
+          <div class="pv2-visual-inner">
+            <div class="pv2-icon">🧠</div>
+            <div class="pv2-vis-label" style="color:#59FF9A">MNIST Classifier</div>
+            <div class="pv2-vis-sub">Neural Net From Scratch</div>
+            <div class="pv2-vis-tags">
+              <span class="pv2-vtag" style="color:#59FF9A;border-color:rgba(89,255,154,.2)">NumPy</span>
+              <span class="pv2-vtag" style="color:var(--muted);border-color:var(--border)">Backprop</span>
+            </div>
+          </div>
+        </div>
+        <div class="pv2-info">
+          <div class="pv2-eyebrow">
+            <span class="pv2-dot" style="background:var(--dim)"></span>GitHub
+          </div>
+          <h3 class="pv2-title">MNIST Digit Classifier</h3>
+          <p class="pv2-body">Neural network from scratch — no TensorFlow, just NumPy. Wrote backprop and gradient descent by hand to actually understand what's happening.</p>
+          <div class="tags" style="margin-top:auto;padding-top:.75rem">
+            <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">From scratch</span>
+          </div>
+          <div class="pv2-links">
+            <span class="pv2-link-chip">
+              <svg width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>GitHub
+            </span>
+          </div>
+        </div>
+      </a>
+      </div> -->
+      <div class="pv2-card">
+  <a href="https://github.com/Nitya-Mehta/mesh-log" target="_blank">
+    <div class="pv2-visual" style="background:linear-gradient(160deg,#06110f 0%,#000000 100%)">
+      <div class="pv2-visual-inner">
+        <div class="pv2-icon">📊</div>
+        <div class="pv2-vis-label" style="color:#59FF9A">Mesh Log</div>
+        <div class="pv2-vis-sub">Production Logger</div>
+        <div class="pv2-vis-tags">
+          <span class="pv2-vtag" style="color:#59FF9A;border-color:rgba(89,255,154,.2)">Automation</span>
+          <span class="pv2-vtag" style="color:var(--muted);border-color:var(--border)">Sheets</span>
+        </div>
+      </div>
+    </div>
+    <div class="pv2-info">
+      <div class="pv2-eyebrow">
+        <span class="pv2-dot" style="background:green"></span>Live
+      </div>
+      <h3 class="pv2-title">Production Logging System</h3>
+      <p class="pv2-body">Real-time logging system with automated shift detection and Google Sheets integration for structured data tracking.</p>
+      <div class="tags" style="margin-top:auto;padding-top:.75rem">
+        <span class="tag">JavaScript</span><span class="tag">Apps Script</span><span class="tag">Sheets</span>
+      </div>
+      <div class="pv2-links">
+            <a href="https://github.com/Nitya-Mehta/mesh-log" target="_blank" class="pv2-link-chip" onclick="event.stopPropagation()">
+              <svg width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>GitHub
+            </a>
+          </div>
+      </div>
+  </a>
+</div>
+
+    </div><!-- /pv2-top -->
+
+    <!-- BOTTOM ROW: horizontally scrollable smaller square cards -->
+    <div class="pv2-scroll-outer">
+      <div class="pv2-scroll-track">
+
+        <a href="https://github.com/Nitya-Mehta/mnist-nn-from-scratch/" class="pv2-mini">
+          <div class="pv2-mini-top">
+            <span class="pv2-mini-n">04</span>
+          </div>
+          <h4 class="pv2-mini-title">MNIST Neural Network</h4>
+          <p class="pv2-mini-body">Built a neural network from scratch using NumPy with backpropagation and gradient descent.</p>
+          <div class="tags"><span class="tag">NumPy</span><span class="tag">Deep Learning</span></div>
+        </a>
+
+        <a href="https://github.com/Nitya-Mehta/ann-customer-churn" class="pv2-mini">
+          <div class="pv2-mini-top">
+            <span class="pv2-mini-n">05</span>
+          </div>
+          <h4 class="pv2-mini-title">Customer Churn Prediction</h4>
+          <p class="pv2-mini-body">ANN model predicting customer churn with preprocessing, encoding, and deployment.</p>
+          <div class="tags"><span class="tag">TensorFlow</span><span class="tag">ANN</span></div>
+        </a>
+
+        <a href="https://github.com/Nitya-Mehta/rnn-movie-review-sentiment-analysis" class="pv2-mini">
+          <div class="pv2-mini-top">
+            <span class="pv2-mini-n">06</span>
+          </div>
+          <h4 class="pv2-mini-title">Sentiment Analysis (RNN)</h4>
+          <p class="pv2-mini-body">Deep learning model using RNN to classify movie reviews as positive or negative.</p>
+          <div class="tags"><span class="tag">NLP</span><span class="tag">RNN</span></div>
+        </a>
+
+        <a href="https://github.com/Nitya-Mehta/logo-generator" class="pv2-mini">
+          <div class="pv2-mini-top">
+            <span class="pv2-mini-n">07</span>
+          </div>
+          <h4 class="pv2-mini-title">AI Logo Generator</h4>
+          <p class="pv2-mini-body">Generative AI tool that creates logos based on text prompts using API integration.</p>
+          <div class="tags"><span class="tag">GenAI</span><span class="tag">API</span></div>
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+
+<!-- ══ SKILLS ══ -->
+<section id="skills">
+  <div class="skills-wrap">
+    <div class="r">
+      <p class="sec-label">Skills</p>
+      <h2 class="sec-title" style="margin-bottom:1.25rem">What I<br/>work with</h2>
+      <p style="font-size:.86rem;color:var(--muted);line-height:1.85;margin-top:1rem">Python-first. Strong in the core ML stack, with growing focus on LLM APIs, generative AI, cybersecurity fundamentals, and robotics systems.</p>
+    </div>
+    <div class="skill-cols r d1">
+
+      <div>
+        <div class="sg-label">Machine Learning & AI</div>
+        <div class="sg-pills">
+          <span class="pill">Scikit-learn</span><span class="pill">TensorFlow</span>
+          <span class="pill">XGBoost</span><span class="pill">Neural Networks</span>
+          <span class="pill">NLP</span><span class="pill">Feature Engineering</span>
+          <span class="pill">EDA</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="sg-label">Generative AI & APIs</div>
+        <div class="sg-pills">
+          <span class="pill">LangChain</span><span class="pill">Hugging Face</span>
+          <span class="pill">OpenAI API</span><span class="pill">Gemini API</span>
+          <span class="pill">Prompt Engineering</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="sg-label">Data & Visualization</div>
+        <div class="sg-pills">
+          <span class="pill">Pandas</span><span class="pill">NumPy</span>
+          <span class="pill">Matplotlib</span><span class="pill">Seaborn</span>
+          <span class="pill">Data Cleaning</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="sg-label">Tools & Deployment</div>
+        <div class="sg-pills">
+          <span class="pill">Streamlit</span><span class="pill">Git</span>
+          <span class="pill">GitHub</span><span class="pill">Jupyter</span>
+          <span class="pill">Google Colab</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CERTIFICATIONS ══ -->
+<section id="certs">
+  <div class="r" style="margin-bottom:2rem">
+    <p class="sec-label">Certifications</p>
+    <h2 class="sec-title">Credentials</h2>
+  </div>
+
+  <ul style="max-width:560px;list-style:none;display:flex;flex-direction:column;gap:.9rem">
+    <li class="r" style="font-size:.9rem;color:var(--muted)">
+      Machine Learning Specialization — <span style="color:var(--dim)">DeepLearning.AI · Coursera</span>
+    </li>
+    <li class="r d1" style="font-size:.9rem;color:var(--muted)">
+      Python for Machine Learning &amp; Data Science Masterclass — <span style="color:var(--dim)">Udemy</span>
+    </li>
+    <li class="r d2" style="font-size:.9rem;color:var(--muted)">
+      The Git &amp; GitHub Bootcamp — <span style="color:var(--dim)">Udemy</span>
+    </li>
+    <li class="r d2" style="font-size:.9rem;color:var(--muted)">
+      Learn Ethical Hacking From Scratch — <span style="color:var(--dim)">Udemy</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ══ BLOG ══ -->
+<section id="blog">
+  <div class="blog-header r">
+    <div>
+      <p class="sec-label">Blog</p>
+      <h2 class="sec-title">Writing</h2>
+    </div>
+    <a href="https://medium.com/@nityachintan" target="_blank" class="blog-view-more">
+      View more →
+    </a>
+  </div>
+  <div id="mediumPosts" class="medium-grid"></div>
+  <!-- View more link is in the header above -->
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="contact-glow"></div>
+  <p class="contact-pre r">Open to opportunities</p>
+  <h2 class="contact-h r d1">
+    Want to work<br/>together?<br/><em>Let's talk.</em>
+  </h2>
+  <p class="contact-p r d2">Internships · research · full-time — I'm open to most things.</p>
+  <a href="mailto:nityachintan@gmail.com" class="contact-mail r d2 mag"><span>nityachintan@gmail.com</span></a>
+  <div class="socials r d3">
+    <a href="https://www.linkedin.com/in/nityamehta/" target="_blank" class="soc">LinkedIn</a>
+    <a href="https://github.com/Nitya-Mehta" target="_blank" class="soc">GitHub</a>
+    <a href="https://medium.com/@nityachintan" target="_blank" class="soc">Medium</a>
+  </div>
+</section>
+
+<footer>
+  <span>© Nitya Mehta</span>
+  <span>Ahmedabad, India</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
